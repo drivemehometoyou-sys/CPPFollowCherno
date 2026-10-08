@@ -9,3 +9,5 @@ int main()
     // std::cout.print("Hello,World!").print("Hello,World!");
     std::cin.get();
 }
+// g++ -c Main.cpp -o Main.o
+// g++ Main.o Log.o -o HelloWorld.exe

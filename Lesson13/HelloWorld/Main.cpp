@@ -12,13 +12,13 @@
 
 struct Entity
 {
-    // static int x, y;
-    int x, y;
+    static int x, y;
+    // int x, y;
 
-    // static void Print()
-    // {
-    //     std::cout << x << ", " << y << std::endl;
-    // }
+    static void Print()
+    {
+        std::cout << x << ", " << y << std::endl;
+    }
 };
 
 
@@ -33,20 +33,20 @@ static void Print(Entity e) // 非静态方法，本质上就这样
 }
 
 
-// int Entity::x;
-// int Entity::y;
+int Entity::x;
+int Entity::y;        // 传统的静态数据成员写法，在类内部只是声明 需要在此处定义
 
 int main()
 {
-    // Entity e;      // 甚至不需要实例， 因我们所做一切均为静态
+    Entity e;      // 甚至不需要实例， 因我们所做一切均为静态
     // e.x = 2;
     // e.y = 3;
-    Entity e;
-    e.x = 2;
-    e.y = 3;
+    // Entity e;
+    // e.x = 2;
+    // e.y = 3;
 
-    // Entity::x = 2;
-    // Entity::y = 3;
+    Entity::x = 2;
+    Entity::y = 3;
 
     // Entity e1 = { 5, 8 };
     // Entity e1;
@@ -55,9 +55,9 @@ int main()
 // 这两个变量在Entity的所有实例中 只有一个实例
 // 因此 这样引用 是没意义的
 
-    Entity e1;
-    e1.x = 5;
-    e1.y = 8;
+    // Entity e1;
+    // e1.x = 5;
+    // e1.y = 8;
 
    
     // Entity::x = 5;
@@ -66,10 +66,10 @@ int main()
 
     // e.Print();
     // e1.Print();
-    // Entity::Print(); // 注意！ 静态方法不能访问 非静态变量, 因为： 静态方法没有类的实例， 就好像在类外写了一个方法
+    Entity::Print(); // 注意！ 静态方法不能访问 非静态变量, 因为： 静态方法没有类的实例， 就好像在类外写了一个方法
 
-    Print(e);
-    Print(e1);
+    // Print(e);
+    // Print(e1);
 
 
     std::cin.get();

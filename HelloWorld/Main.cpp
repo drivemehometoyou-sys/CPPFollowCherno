@@ -11,3 +11,8 @@ int main()
 }
 // g++ -c Main.cpp -o Main.o
 // g++ Main.o Log.o -o HelloWorld.exe
+
+
+
+
+// 源代码 .cpp → 预处理 → 编译 → 汇编 → 目标文件 .o → 链接 → 可执行文件 .exe

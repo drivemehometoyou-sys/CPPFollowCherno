@@ -16,6 +16,7 @@ public:
     Player(const std::string& name)
     : m_Name(name) {}
 
+    // std::string GetName() { return m_Name; }  
     std::string GetName() override { return m_Name; }  // override 非必须， 但能增加 可读性
 };
 
@@ -27,9 +28,9 @@ void PrintName(Entity* entity)
 int main()
 {
     Entity* e = new Entity();
-    // std::cout << e->GetName() << std::endl;
+    std::cout << e->GetName() << std::endl;
     Player* p = new Player("Leon");
-    // std::cout << p->GetName() << std::endl;
+    std::cout << p->GetName() << std::endl;
     
     // Entity* entity = p;
     // std::cout << entity->GetName() << std::endl; // 打印出来是 Entity

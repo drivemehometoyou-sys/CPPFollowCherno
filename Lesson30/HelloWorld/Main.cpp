@@ -34,6 +34,7 @@ int main()
 
     Entity a("Leon"); 
     // Entity a1 = "Leon";       
+    // Entity a1 = Entity("Leon");
     Entity a1 = (std::string)"Leon";
 
     Entity b = 23;

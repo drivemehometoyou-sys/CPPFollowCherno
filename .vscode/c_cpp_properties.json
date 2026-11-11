@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                // GLFW 第三方库头文件搜索路径，供 IntelliSense 查找和解析
+                "${workspaceFolder}/Lesson39/Dependencies/GLFW/include",
+                "${workspaceFolder}/Lesson41/Engine/src"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                // 告诉 IntelliSense：当前项目是 GLFW DLL 的使用者，使 GLFWAPI 展开为 __declspec(dllimport)
+                "GLFW_DLL"
+            ],
+            "compilerPath": "C:\\dev\\w64devkit\\bin\\gcc.exe",
+            "cStandard": "gnu23",
+            "cppStandard": "gnu++20",
+            "intelliSenseMode": "windows-gcc-x64"
+        }
+    ],
+    "version": 4
+}
